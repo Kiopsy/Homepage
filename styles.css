@@ -1,0 +1,81 @@
+/*Sets the background image to a picture of the Charles River*/
+body
+{
+    background-image: url("CS50_photos/charles_river.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+/*Accounts for text alignments, size, and color*/
+header
+{
+    font-weight: bold;
+    font-size: 300%;
+    color:white;
+}
+
+h5
+{
+    text-align: center;
+    font-style: oblique;
+
+}
+footer
+{
+    text-align: center;
+    background-color:white;
+    width: 100%;
+}
+/*Formatting specifications*/
+.container
+{
+    border: 10px solid white;
+    background-color:white;
+    width: 100%;
+}
+.column
+{
+    width: 16.66667%;
+    padding: 0px;
+}
+.row
+{
+    margin-top: 20px;
+}
+.navbar
+{
+    margin-bottom: 40px;
+}
+
+#picture_row
+{
+    width: 100%;
+    float: left;
+    position:relative;
+    border: 5px solid white;
+}
+
+#brief_introduction
+{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#greeting
+{
+    margin-top: 40px;
+}
+
+#intro
+{
+    margin-bottom: 40px;
+}
+
+#random_img
+{
+    margin:auto;
+}
+
+button
+{
+    margin: auto;
+}

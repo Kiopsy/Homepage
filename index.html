@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script>
+          //Adds an event listener to the "Get a random Picture!" button.
+          document.addEventListener("DOMContentLoaded", function() {
+                let randomPicBtn = document.querySelector("#randomBtn");
+                let randomPic = document.querySelector("#random_img");
+
+                randomPicBtn.addEventListener("click", function() {
+                  randomPhoto()
+                });
+                
+                
+                //Every time the button is pressed, it will set the image source to a random jpg in the "random_photos" folder
+                
+                function randomPhoto()
+                {
+                  //Takes a random integer from 1 through 25 to select a random image
+                  //ex: 4.jpg is an image in the "random_photos" folder
+                  randomPic.src = `random_photos/${1+Math.round(Math.random()*24)}.jpg`;
+                }
+            });
+        </script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Homepage</title>
+    </head>
+    <body>
+        <header>Victor Goncalves</header>
+        <!-- Bootstrap Navbar implementation from: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="harvard.html">Harvard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mit.html">MIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="boston.html">Boston</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!--Bootstrap grid layout implementation-->
+        <!-- Accounts for the introduction at the home page + random image button-->
+        <div class="container" id="intro">
+          <div class="row">
+            <div class="col">
+              <img src= "CS50_photos/widener_me.jpg" alt="Victor At Widener Library" width="520"/>
+            </div>
+            <div class="col">
+              <img src= "CS50_photos/mirror_me.jpg" alt="Victor Mirror Photo" width="520"/>
+            </div>
+          </div>
+          <h2 id="greeting">Hello all!</h2>
+          <p id="brief_introduction">My name is Victor! I am a current first-year student at Harvard with type-1 diabetes living in Massachusetts Hall! Computer science and diabetes facinate me, and I love to spend my free time taking photos to visually document my adventures. :)</p>
+          <div class="row">
+            <img id="random_img" src="CS50_photos/charles_river.jpg" alt= "Random Image" width="400"/>
+          </div>
+          <div class="row">
+            <button id="randomBtn">Get a random picture!</button>
+          </div>
+        </div>
+
+        <!-- Accounts for the row of pictures at the bottom of the page -->
+        <div class="row" id="picture_row" >
+          <div class="column">
+            <img src= "CS50_photos/snowman.jpg" alt="Snowman" style="width:100%"/>
+          </div>
+          <div class="column">
+            <img src= "CS50_photos/mass_hall_homies.jpg" alt="Mass Hall Students" style="width:100%"/>
+          </div>
+          <div class="column">
+            <img src= "CS50_photos/kayaks.jpg" alt="Kayaks at MIT Sailing Pavilion" style="width:100%"/>
+          </div>
+          <div class="column">
+            <img src= "CS50_photos/nevy.jpg" alt="Dog" style="width:100%"/>
+          </div>
+          <div class="column">
+            <img src= "CS50_photos/phone.jpg" alt="Phone Reflections" style="width:100%"/>
+          </div>
+          <div class="column">
+            <img src= "CS50_photos/tree.jpg" alt="Tree Growth" style="width:100%"/>
+          </div>
+        </div>
+
+      <!-- Footer at the bottom of the page -->
+      <footer>
+          Copyright © Victor Goncalves --- Camera Specs: Cannon EOS Rebel T100
+      </footer>
+
+    </body>
+</html>
